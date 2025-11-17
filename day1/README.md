@@ -160,3 +160,32 @@ aws_instance.example: Creation complete after 13s [id=i-08ae8669913477278]
 Apply complete! Resources: 1 added, 0 changed, 0 destroyed.
 
 ```
+
+### Destroying resources by terraform 
+
+```
+terraform plan 
+aws_instance.example: Refreshing state... [id=i-08ae8669913477278]
+
+No changes. Your infrastructure matches the configuration.
+
+Terraform has compared your real infrastructure against your configuration and found no differences, so no changes are needed.
+[ec2-user@ip-172-31-16-77 ashu-project]$ terraform destroy 
+aws_instance.example: Refreshing state... [id=i-08ae8669913477278]
+
+Terraform used the selected providers to generate the following execution plan. Resource actions are indicated with the following
+symbols:
+  - destroy
+
+Terraform will perform the following actions:
+
+  # aws_instance.example will be destroyed
+  - resource "aws_instance" "example" {
+      - ami                                  = "ami-0cae6d6fe6048ca2c" -> null
+      - arn                                  = "arn:aws:ec2:us-east-1:992382386705:instance/i-08ae8669913477278" -> null
+      - associate_public_ip_address          = true -> null
+      - availability_zone                    = "us-east-1d" -> null
+      - disable_api_stop                     = false -> null
+      - disable_api_termination              = false -> null
+
+```
