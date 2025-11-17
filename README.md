@@ -4,3 +4,6 @@
 
 <img src="time.png">
 
+### lab access details 
+
+<img src="lab1.png">
