@@ -292,3 +292,12 @@ my-ec2-public-ipaddress = "54.226.61.251"
 172.31.30.144[ec2-user@ip-172-31-16-77 ashu-project]$ 
 
 ```
+### selecting particular resources 
+
+```
+ 120  terraform apply -target aws_security_group.ashu_sec-groups  -target aws_vpc_security_group_egress_rule.allow_all_traffic_ipv4
+  121  history 
+  122  terraform destroy -target aws_security_group.ashu_sec-groups  -target aws_vpc_security_group_egress_rule.allow_all_traffic_ipv4
+  123  history 
+
+```
