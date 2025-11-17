@@ -217,3 +217,63 @@ resource "aws_instance" "example" {
     iam_instance_profile                 = null
     id                                   = "i-074794c01ebbf791b"
 ```
+
+### after adding output section -- apply 
+
+```
+ec2-user@ip-172-31-16-77 ashu-project]$ 
+[ec2-user@ip-172-31-16-77 ashu-project]$ terraform  apply 
+aws_instance.example: Refreshing state... [id=i-074794c01ebbf791b]
+
+Changes to Outputs:
+  + my-ec2-public-ipaddress = "50.17.127.6"
+
+You can apply this plan to save these new output values to the Terraform state, without changing any real infrastructure.
+
+Do you want to perform these actions?
+  Terraform will perform the actions described above.
+  Only 'yes' will be accepted to approve.
+
+  Enter a value: yes
+
+
+Apply complete! Resources: 0 added, 0 changed, 0 destroyed.
+
+Outputs:
+
+my-ec2-public-ipaddress = "50.17.127.6"
+
+```
+### terraform more commands 
+
+```
+[ec2-user@ip-172-31-16-77 ashu-project]$ terraform fmt 
+hello.tf
+[ec2-user@ip-172-31-16-77 ashu-project]$ terraform  validate 
+╷
+│ Error: Missing required argument
+│ 
+│   with aws_instance.example,
+│   on hello.tf line 11, in resource "aws_instance" "example":
+│   11: resource "aws_instance" "example" {
+│ 
+│ "ami": one of `ami,launch_template` must be specified
+╵
+[ec2-user@ip-172-31-16-77 ashu-project]$ terraform  plan 
+╷
+│ Error: Missing required argument
+│ 
+│   with aws_instance.example,
+│   on hello.tf line 11, in resource "aws_instance" "example":
+│   11: resource "aws_instance" "example" {
+│ 
+│ "ami": one of `ami,launch_template` must be specified
+╵
+[ec2-user@ip-172-31-16-77 ashu-project]$ terraform  validate 
+Success! The configuration is valid.
+
+```
+### terraform core workflow 
+
+<img src="tfw.png">
+
