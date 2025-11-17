@@ -189,3 +189,31 @@ Terraform will perform the following actions:
       - disable_api_termination              = false -> null
 
 ```
+
+### terraform tfstate understanding 
+
+<img src="tfstate.png">
+
+
+### terraform state options 
+
+```
+terraform   state  list
+aws_instance.example
+[ec2-user@ip-172-31-16-77 ashu-project]$ terraform   state  show  aws_instance.example 
+# aws_instance.example:
+resource "aws_instance" "example" {
+    ami                                  = "ami-0cae6d6fe6048ca2c"
+    arn                                  = "arn:aws:ec2:us-east-1:992382386705:instance/i-074794c01ebbf791b"
+    associate_public_ip_address          = true
+    availability_zone                    = "us-east-1d"
+    disable_api_stop                     = false
+    disable_api_termination              = false
+    ebs_optimized                        = false
+    force_destroy                        = false
+    get_password_data                    = false
+    hibernation                          = false
+    host_id                              = null
+    iam_instance_profile                 = null
+    id                                   = "i-074794c01ebbf791b"
+```
