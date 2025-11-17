@@ -277,3 +277,18 @@ Success! The configuration is valid.
 
 <img src="tfw.png">
 
+### terraform output 
+
+```
+ec2-user@ip-172-31-16-77 ashu-project]$ terraform output
+ashu-vm-private-ip = "172.31.30.144"
+my-ec2-current-status = "running"
+my-ec2-public-ipaddress = "54.226.61.251"
+[ec2-user@ip-172-31-16-77 ashu-project]$ 
+[ec2-user@ip-172-31-16-77 ashu-project]$ 
+[ec2-user@ip-172-31-16-77 ashu-project]$ terraform output  ashu-vm-private-ip 
+"172.31.30.144"
+[ec2-user@ip-172-31-16-77 ashu-project]$ terraform output --raw  ashu-vm-private-ip 
+172.31.30.144[ec2-user@ip-172-31-16-77 ashu-project]$ 
+
+```
