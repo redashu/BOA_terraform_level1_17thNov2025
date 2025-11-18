@@ -5,6 +5,13 @@ terraform {
       version = "6.21.0"
     }
   }
+  backend "s3" {
+    bucket = "boa-terraform-training-bucket"
+    key = "dev/ashutoshh/terraform.tfstate"
+    encrypt = true
+    region = "us-east-1"
+    dynamodb_table = "ashutoshh-lock-table"
+  }
 }
 
 provider "aws" {

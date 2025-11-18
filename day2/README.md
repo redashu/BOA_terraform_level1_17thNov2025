@@ -149,3 +149,7 @@ Outputs:
 my-vm-public-ip = "54.234.251.85"
 
 ```
+## tfstate file to remote location 
+
+<img src="tfl.png">
+
