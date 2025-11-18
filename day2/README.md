@@ -40,3 +40,29 @@ ls  -a
                         └── terraform-provider-aws_v6.21.0_x5
 
 ```
+
+### replace variable default values in terraform plan 
+
+```
+terraform  plan   -var  machine_size="t2.small"   -var vm_name="ashutoshh-vmm"
+
+Terraform used the selected providers to generate the following execution plan. Resource actions are indicated with the following
+symbols:
+  + create
+
+Terraform will perform the following actions:
+
+  # aws_instance.example will be created
+  + resource "aws_instance" "example" {
+      + ami                                  = "ami-0cae6d6fe6048ca2c"
+      + arn                                  = (known after apply)
+      + associate_public_ip_address          = (known after apply)
+
+```
+### passing tfvars file 
+
+```
+terraform  plan    -var-file  myvar-values.tfvars
+terraform  apply    -var-file  myvar-values.tfvars
+```
+
