@@ -172,3 +172,22 @@ Initializing provider plugins...
 - Using previously-installed hashicorp/local v2.6.1
 
 ```
+## basic understanding of git repo clone process
+
+<img src="clone.png">
+
+### cloing git repo to local env 
+
+```
+ git  clone  https://github.com/redashu/ashutoshh-boa-terraform-cicd.git
+Cloning into 'ashutoshh-boa-terraform-cicd'...
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0 (from 0)
+Receiving objects: 100% (3/3), done.
+[ec2-user@ip-172-31-16-77 ashu-project]$ ls
+ashutoshh-boa-terraform-cicd  day1-code  day2-code
+[ec2-user@ip-172-31-16-77 ashu-project]$ 
+
+
+```
