@@ -153,3 +153,22 @@ my-vm-public-ip = "54.234.251.85"
 
 <img src="tfl.png">
 
+### migrating remote s3 of terraform tfstate file 
+
+```
+terraform  init -migrate-state 
+Initializing the backend...
+Backend configuration changed!
+
+Terraform has detected that the configuration specified for the backend
+has changed. Terraform will now check for existing state in the backends.
+
+
+Successfully configured the backend "s3"! Terraform will automatically
+use this backend unless the backend configuration changes.
+Initializing provider plugins...
+- Reusing previous version of hashicorp/local from the dependency lock file
+- Reusing previous version of hashicorp/aws from the dependency lock file
+- Using previously-installed hashicorp/local v2.6.1
+
+```
