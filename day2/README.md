@@ -197,3 +197,92 @@ ashutoshh-boa-terraform-cicd  day1-code  day2-code
 cp -v  day2-code/*.tf  ashutoshh-boa-terraform-cicd/
 cp -v  day2-code/terraform.tfvars  ashutoshh-boa-terraform-cicd/
 ```
+
+### running terraform in git local repo 
+
+```
+ ls
+ashutoshh-boa-terraform-cicd  day1-code  day2-code
+
+[ec2-user@ip-172-31-16-77 ashu-project]$ cd  ashutoshh-boa-terraform-cicd/
+
+[ec2-user@ip-172-31-16-77 ashutoshh-boa-terraform-cicd]$ ls
+README.md  ec2.tf  outputs.tf  providers.tf  terraform.tfvars  variables.tf
+[ec2-user@ip-172-31-16-77 ashutoshh-boa-terraform-cicd]$ 
+
+
+[ec2-user@ip-172-31-16-77 ashutoshh-boa-terraform-cicd]$ terraform  init 
+Initializing the backend...
+
+Successfully configured the backend "s3"! Terraform will automatically
+use this backend unless the backend configuration changes.
+Initializing provider plugins...
+- Finding hashicorp/aws versions matching "6.21.0"...
+- Finding latest version of hashicorp/local...
+- Installing hashicorp/aws v6.21.0...
+- Installed hashicorp/aws v6.21.0 (signed by HashiCorp)
+- Installing hashicorp/local v2.6.1...
+- Installed hashicorp/local v2.6.1 (signed by HashiCorp)
+Terraform has created a lock file .terraform.lock.hcl to record the provider
+selections it made above. Include this file in your version control repository
+so that Terraform can guarantee to make the same selections by default when
+you run "terraform init" in the future.
+
+Terraform has been successfully initialized!
+
+You may now begin working with Terraform. Try running "terraform plan" to see
+any changes that are required for your infrastructure. All Terraform commands
+should now work.
+
+If you ever set or change modules or backend configuration for Terraform,
+rerun this command to reinitialize your working directory. If you forget, other
+commands will detect it and remind you to do so if necessary.
+[ec2-user@ip-172-31-16-77 ashutoshh-boa-terraform-cicd]$ terraform destroy 
+aws_instance.example: Refreshing state... [id=i-0b23dee96a118b856]
+local_file.ashu-file: Refreshing state... [id=5f0398454c4ae01b6c03da3eeae27b70b8d49fe5]
+
+Terraform used the selected providers to generate the following execution plan. Resource actions are indicated with the following symbols:
+  - destroy
+
+Terraform will perform the following actions:
+
+  # aws_instance.example will be destroyed
+  - resource "aws_instance" "example" {
+      - ami                                  = "ami-0cae6d6fe6048ca2c" -> null
+      - arn                                  = "arn:aws:ec2:us-east-1:992382386705:instance/i-0b23dee96a118b856" -> null
+      - associate_public_ip_address          = true -> null
+      - availability_zone                    = "us-east-1d" -> null
+      - disable_api_stop                     = false -> null
+
+```
+
+### git  repo handle 
+
+```
+ec2-user@ip-172-31-16-77 ashutoshh-boa-terraform-cicd]$ git add  .
+[ec2-user@ip-172-31-16-77 ashutoshh-boa-terraform-cicd]$ 
+[ec2-user@ip-172-31-16-77 ashutoshh-boa-terraform-cicd]$ git commit  -m "my terraform codes"
+[master 7a55e90] my terraform codes
+ Committer: EC2 Default User <ec2-user@ip-172-31-16-77.ec2.internal>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 6 files changed, 75 insertions(+)
+ create mode 100644 .gitignore
+ create mode 100644 ec2.tf
+ create mode 100644 outputs.tf
+ create mode 100644 providers.tf
+ create mode 100644 terraform.tfvars
+ create mode 100644 variables.tf
+
+ ```
+ 
