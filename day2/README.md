@@ -191,3 +191,9 @@ ashutoshh-boa-terraform-cicd  day1-code  day2-code
 
 
 ```
+### copy code to gitrepo in local env 
+
+```
+cp -v  day2-code/*.tf  ashutoshh-boa-terraform-cicd/
+cp -v  day2-code/terraform.tfvars  ashutoshh-boa-terraform-cicd/
+```
