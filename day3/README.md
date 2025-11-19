@@ -72,3 +72,12 @@ Switched to branch 'dev'
 [ec2-user@ip-172-31-16-77 ashutoshh-boa-terraform-cicd]$ 
 
 ```
+### pushing to dev branch 
+
+```
+333  git add .
+  334  git commit  -m "updating dev branch with jenkinsfile"
+  335  history 
+  336  git push origin dev 
+
+```
