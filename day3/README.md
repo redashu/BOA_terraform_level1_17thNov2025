@@ -81,3 +81,25 @@ Switched to branch 'dev'
   336  git push origin dev 
 
 ```
+### creating antoher branch 
+
+```
+[ec2-user@ip-172-31-16-77 ashutoshh-boa-terraform-cicd]$ git  branch 
+* dev
+  master
+[ec2-user@ip-172-31-16-77 ashutoshh-boa-terraform-cicd]$ git switch  master 
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+[ec2-user@ip-172-31-16-77 ashutoshh-boa-terraform-cicd]$ git  checkout -b  prod 
+Switched to a new branch 'prod'
+[ec2-user@ip-172-31-16-77 ashutoshh-boa-terraform-cicd]$ git branch 
+  dev
+  master
+* prod
+[ec2-user@ip-172-31-16-77 ashutoshh-boa-terraform-cicd]$ 
+
+```
+
+### for each concept 
+
+<img src="for-each.png">
