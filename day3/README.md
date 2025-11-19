@@ -34,4 +34,12 @@ After doing this, you may fix the identity used for this commit with:
  create mode 100644 security-groups.tf
 
  ```
- 
+ ## understanding cicd 
+
+ <img src="cicd1.png">
+
+ ### auto trigger job 
+
+  <img src="cicd2.png">
+
+  
