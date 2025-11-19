@@ -42,4 +42,33 @@ After doing this, you may fix the identity used for this commit with:
 
   <img src="cicd2.png">
 
-  
+### creating multi branches git repo so that we can maintain code to multi env like  dev , uat , and prod 
+
+```
+ git branch 
+* master
+[ec2-user@ip-172-31-16-77 ashutoshh-boa-terraform-cicd]$ git  checkout -b  dev 
+Switched to a new branch 'dev'
+[ec2-user@ip-172-31-16-77 ashutoshh-boa-terraform-cicd]$ git branch 
+* dev
+  master
+[ec2-user@ip-172-31-16-77 ashutoshh-boa-terraform-cicd]$ 
+
+```
+### switching of branches 
+
+```
+[ec2-user@ip-172-31-16-77 ashutoshh-boa-terraform-cicd]$ git switch  master 
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+[ec2-user@ip-172-31-16-77 ashutoshh-boa-terraform-cicd]$ git branch 
+  dev
+* master
+[ec2-user@ip-172-31-16-77 ashutoshh-boa-terraform-cicd]$ git switch dev 
+Switched to branch 'dev'
+[ec2-user@ip-172-31-16-77 ashutoshh-boa-terraform-cicd]$ git branch 
+* dev
+  master
+[ec2-user@ip-172-31-16-77 ashutoshh-boa-terraform-cicd]$ 
+
+```
